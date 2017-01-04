@@ -26,6 +26,37 @@ function initMap() {
     center: {lat: -34.397, lng: 150.644},
     zoom: 8
   });
+
+  poly = new google.maps.Polyline({
+    strokeColor: '#000000',
+    strokeOpacity: 1.0,
+    strokeWeight: 3
+  });
+
+  poly.setMap(map);
+
+  var points = new Array();
+
+  points.push({lat: -16.3314258, lng: -72.2004287});
+  points.push({lat: -16.3295928, lng: -72.2026067});
+  points.push({lat: -16.3280278, lng: -72.2039157});
+  points.push({lat: -16.3278938, lng: -72.2037437});
+  points.push({lat: -16.3255258, lng: -72.2065437});
+  points.push({lat: -16.3290118, lng: -72.2106297});
+  points.push({lat: -16.3304738, lng: -72.2116917});
+  points.push({lat: -16.3304738, lng: -72.2116917});
+  points.push({lat: -16.3370548, lng: -72.2050807});
+  points.push({lat: -16.3353248, lng: -72.2024517});
+  points.push({lat: -16.3347178, lng: -72.2028377});
+  points.push({lat: -16.3314898, lng: -72.2003917});
+  points.push({lat: -16.3314258, lng: -72.2004287});
+
+  var path = poly.getPath();
+  for(var i in points){
+      path.push(pints[i]);
+  }
+
+
 }
 
     </script>
