@@ -35,6 +35,12 @@ function initMap() {
     title: 'Catolica Majes (Fundo La Catolica)'
   });
 
+  var infowindow = new google.maps.InfoWindow({
+    content: 'Catolica Majes (Fundo La Catolica)'
+  });
+
+  infowindow.open(map,marker);
+
   poly = new google.maps.Polyline({
     strokeColor: '#ff0000',
     strokeOpacity: 1.0,
