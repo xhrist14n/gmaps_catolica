@@ -56,6 +56,11 @@ function initMap() {
   for(var i in points){
     path.push(new google.maps.LatLng(points[i].lat,points[i].lng));
   }
+
+  map.addListener('click', function(e) {
+    console.log(e);
+  });
+
 }
 
 
