@@ -21,6 +21,7 @@
     <script>
 
 var map;
+var poly;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -16.3332118,lng: -72.2034975},
@@ -53,14 +54,12 @@ function initMap() {
 
   var path = poly.getPath();
   for(var i in points){
-      path.push(points[i]);
+    path.push(new google.maps.LatLng(points[i].lat,points[i].lng));
   }
-
-
 }
 
+
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpPpeq0vcSZpD4c2dO8FwwIe6LUpEi4HY&callback=initMap"
-        async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpPpeq0vcSZpD4c2dO8FwwIe6LUpEi4HY&callback=initMap" async defer></script>
   </body>
 </html>
