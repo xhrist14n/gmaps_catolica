@@ -58,7 +58,7 @@ function initMap() {
   }
 
   map.addListener('click', function(e) {
-    console.log(e);
+    console.log('lat: '+e.latLng.lat()+', lng: '+e.latLng.lng());
   });
 
 }
